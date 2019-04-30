@@ -15,12 +15,6 @@ public class Users {
     public Users(){
     	
     }
-    public Users(Integer id, String name, String teamName, Long salary) {
-        this.id = id;
-        this.name = name;
-        this.teamName = teamName;
-        this.salary = salary;
-    }
 
     public Integer getId() {
         return id;

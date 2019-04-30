@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.techprimers.mongodb.springbootmongodbexample.document.Users;
-import com.techprimers.mongodb.springbootmongodbexample.repository.UserRepository;
 
 @RestController
 @RequestMapping("/rest/users")
@@ -23,11 +22,6 @@ public class UsersResource {
 
 	@Autowired
     MongoTemplate mongoTemplate;
-    private UserRepository userRepository;
-
-    public UsersResource(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     @GetMapping("/all")
     public List<Users> getAll() {
